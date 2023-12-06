@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Chatbot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyD8YI7EjSCnq3XMbpihiWxigF5owlJ2J1" crossorigin="anonymous">
+</head>
+<body class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Document Chatbot</h1>
+        <form method="post" action="/" class="mt-4">
+            <div class="form-group">
+                <label for="user_input">Ask a question:</label>
+                <input type="text" class="form-control" id="user_input" name="user_input" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        {% if answer %}
+            <hr class="my-4">
+            <p class="lead">Chatbot: {{ answer }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
